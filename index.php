@@ -16,50 +16,50 @@ $questions = [
     [
         "id" => 3,
         "title" => "Misi 3: Pendaftaran Murid Baru",
-        "story" => "Seorang murid baru bernama 'Rian' mendaftar ke sekolah. Masukkan data namanya ke dalam tabel <b>siswa</b> (kolom <code>nama</code>).",
-        "answer" => "INSERT INTO siswa (nama) VALUES ('Rian')"
+        "story" => "Seorang murid baru bernama 'Rian' mendaftar ke sekolah. Masukkan data id, nama, dan kelas ke dalam tabel <b>siswa</b> (kolom <code>id</code>, <code>nama</code>, <code>kelas</code>).",
+        "answer" => "INSERT INTO siswa (id, nama, kelas) VALUES (2, 'Rian', 'C')"
     ],
     [
         "id" => 4,
         "title" => "Misi 4: Koreksi Nama Siswa",
-        "story" => "Nama siswa yang memiliki ID 1 ternyata salah ketik dan harus diubah menjadi 'Siti' pada tabel <b>siswa</b>.",
-        "answer" => "UPDATE siswa SET nama = 'Siti' WHERE id = 1"
+        "story" => "Seorang Siswa bernama 'Riska' pindah kelas dari kelas B ke kelas A. Perbarui datanya pada tabel <b>siswa</b>",
+        "answer" => "UPDATE siswa SET kelas = 'A' WHERE nama = 'Riska' AND kelas = 'B'"
     ],
     [
         "id" => 5,
         "title" => "Misi 5: Siswa Pindah Sekolah",
-        "story" => "Siswa dengan ID 1 telah pindah sekolah dan datanya harus dihapus dari tabel <b>siswa</b>.",
-        "answer" => "DELETE FROM siswa WHERE id = 1"
+        "story" => "Ayah Charles dipindah tugas keluar negeri,jadi charles harus ikut dan pindah sekolah, maka data charles akan dihapus dari tabel <b>siswa</b>.",
+        "answer" => "DELETE FROM siswa WHERE nama = 'Charles'"
     ],
     [
         "id" => 6,
         "title" => "Misi 6: Pengecekan Stok Koperasi",
-        "story" => "Pengurus koperasi sekolah ingin mengecek daftar seluruh barang dagangan yang ada di dalam tabel <b>barang</b>.",
+        "story" => "Bantu Pengurus Kopdes yang gaptek ini untuk mengecek daftar seluruh barang dagangan yang ada di dalam tabel <b>barang</b>.",
         "answer" => "SELECT * FROM barang"
     ],
     [
         "id" => 7,
         "title" => "Misi 7: Barang Harga Spesifik",
-        "story" => "Petugas koperasi ingin mencari barang di tabel <b>barang</b> yang harganya tepat 5000 (<code>harga = 5000</code>).",
+        "story" => "Petugas kopdes ini ingin mencari barang di tabel <b>barang</b> yang harganya tepat 5000 (<code>harga = 5000</code>).",
         "answer" => "SELECT * FROM barang WHERE harga = 5000"
     ],
     [
         "id" => 8,
         "title" => "Misi 8: Menambah Barang Koperasi",
-        "story" => "Koperasi kedatangan stok baru berupa 'Penggaris'. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
+        "story" => "Kopdes kedatangan stok baru berupa 'Penggaris'. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
         "answer" => "INSERT INTO barang (nama) VALUES ('Penggaris')"
     ],
     [
         "id" => 9,
         "title" => "Misi 9: Penyesuaian Harga Barang",
-        "story" => "Harga barang dengan ID 2 di tabel <b>barang</b> mengalami kenaikan menjadi 7000. Perbarui harganya!",
-        "answer" => "UPDATE barang SET harga = 7000 WHERE id = 2"
+        "story" => "Sedang terjadi krisis pembakaran hutan. jadi Kopdes berencana menaikkan Harga masker di tabel <b>barang</b> menjadi 20000. Perbarui harganya!",
+        "answer" => "UPDATE barang SET harga = 20000 WHERE nama = 'Masker'"
     ],
     [
         "id" => 10,
         "title" => "Misi 10: Menghapus Barang Rusak",
-        "story" => "Barang dengan ID 2 di tabel <b>barang</b> sudah rusak dan kedaluwarsa. Hapus data tersebut dari sistem!",
-        "answer" => "DELETE FROM barang WHERE id = 2"
+        "story" => "LPG 3 KG di tabel <b>barang</b> sudah ditimbun. Hapus data tersebut dari sistem!",
+        "answer" => "DELETE FROM barang WHERE nama = 'LPG 3 KG'"
     ],
     [
         "id" => 11,
@@ -70,7 +70,7 @@ $questions = [
     [
         "id" => 12,
         "title" => "Misi 12: Mencari Karyawan Bernama Agus",
-        "story" => "Bagian administrasi mencari data karyawan di tabel <b>karyawan</b> yang memiliki nama 'Agus'.",
+        "story" => "Bagian administrasi ingin mencari data karyawan di tabel <b>karyawan</b> yang memiliki nama 'Agus'.",
         "answer" => "SELECT * FROM karyawan WHERE nama = 'Agus'"
     ],
     [
@@ -82,14 +82,14 @@ $questions = [
     [
         "id" => 14,
         "title" => "Misi 14: Mutasi Jabatan Karyawan",
-        "story" => "Karyawan dengan ID 3 dipindahkan posisinya menjadi bagian 'Keuangan' di tabel <b>karyawan</b>. Perbarui datanya!",
-        "answer" => "UPDATE karyawan SET bagian = 'Keuangan' WHERE id = 3"
+        "story" => "Karyawan dengan nama 'Rusdi' dipindahkan posisinya menjadi bagian 'Keuangan' di tabel <b>karyawan</b>. Perbarui datanya!",
+        "answer" => "UPDATE karyawan SET bagian = 'Keuangan' WHERE nama = 'Rusdi'"
     ],
     [
         "id" => 15,
         "title" => "Misi 15: Pegawai Resign",
-        "story" => "Pegawai dengan ID 3 telah resmi mengundurkan diri. Hapus data tersebut dari tabel <b>karyawan</b>.",
-        "answer" => "DELETE FROM karyawan WHERE id = 3"
+        "story" => "Pegawai dengan nama 'Seto' telah resmi mengundurkan diri. Hapus data tersebut dari tabel <b>karyawan</b>.",
+        "answer" => "DELETE FROM karyawan WHERE nama = 'Seto'"
     ]
 ];
 ?>
