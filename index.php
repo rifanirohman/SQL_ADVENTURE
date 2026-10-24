@@ -1,95 +1,109 @@
 <?php
-// 15 Soal SQL Dasar Berbentuk Soal Cerita Ringan
 $questions = [
     [
         "id" => 1,
         "title" => "Misi 1: Daftar Seluruh Siswa",
         "story" => "Di ruang Tata Usaha, Pak Guru sedang kebingungan mencari data seluruh siswa baru. Ia meminta tolong kelompokmu untuk menampilkan semua data dari tabel <b>siswa</b>.",
-        "answer" => "SELECT * FROM siswa"
+        "answer" => "SELECT * FROM siswa",
+        "image" => "images/soal1.png"
     ],
     [
         "id" => 2,
         "title" => "Misi 2: Mencari Siswa Tertentu",
         "story" => "Ibu Guru ingin memeriksa data khusus milik seorang siswa yang memiliki nomor ID 2 (<code>id = 2</code>) di dalam tabel <b>siswa</b>. Bagaimana cara menampilkannya?",
-        "answer" => "SELECT * FROM siswa WHERE id = 2"
+        "answer" => "SELECT * FROM siswa WHERE id = 2",
+        "image" => "images/soal2.png"
     ],
     [
         "id" => 3,
-        "title" => "Misi 3: Pendaftaran Murid Baru",
-        "story" => "Seorang murid baru bernama 'Rian' mendaftar ke sekolah. Masukkan data id, nama, dan kelas ke dalam tabel <b>siswa</b> (kolom <code>id</code>, <code>nama</code>, <code>kelas</code>).",
-        "answer" => "INSERT INTO siswa (id, nama, kelas) VALUES (2, 'Rian', 'C')"
+       "title" => "Misi 3: Pendaftaran Murid Baru",
+        "story" => "Seorang murid baru bernama 'Rian' dengan nomer id '2' dan ia mendaftar ke kelas 'C'. Masukkan data id, nama, dan kelas ke dalam tabel <b>siswa</b> (kolom <code>id</code>, <code>nama</code>, <code>kelas</code>).",
+        "answer" => "INSERT INTO siswa (id, nama, kelas) VALUES (2, 'Rian', 'C')",
+        "image" => "images/soal3.png"
     ],
     [
         "id" => 4,
         "title" => "Misi 4: Koreksi Nama Siswa",
         "story" => "Seorang Siswa bernama 'Riska' pindah kelas dari kelas B ke kelas A. Perbarui datanya pada tabel <b>siswa</b>",
-        "answer" => "UPDATE siswa SET kelas = 'A' WHERE nama = 'Riska' AND kelas = 'B'"
+        "answer" => "UPDATE siswa SET kelas = 'A' WHERE nama = 'Riska' AND kelas = 'B'",
+        "image" => "images/soal4.png"
     ],
     [
         "id" => 5,
         "title" => "Misi 5: Siswa Pindah Sekolah",
         "story" => "Ayah Charles dipindah tugas keluar negeri,jadi charles harus ikut dan pindah sekolah, maka data charles akan dihapus dari tabel <b>siswa</b>.",
-        "answer" => "DELETE FROM siswa WHERE nama = 'Charles'"
+        "answer" => "DELETE FROM siswa WHERE nama = 'Charles'",
+        "image" => "images/soal5.png"
     ],
     [
         "id" => 6,
         "title" => "Misi 6: Pengecekan Stok Koperasi",
         "story" => "Bantu Pengurus Kopdes yang gaptek ini untuk mengecek daftar seluruh barang dagangan yang ada di dalam tabel <b>barang</b>.",
-        "answer" => "SELECT * FROM barang"
+        "answer" => "SELECT * FROM barang",
+        "image" => "images/soal6.png"
     ],
     [
         "id" => 7,
         "title" => "Misi 7: Barang Harga Spesifik",
         "story" => "Petugas kopdes ini ingin mencari barang di tabel <b>barang</b> yang harganya tepat 5000 (<code>harga = 5000</code>).",
-        "answer" => "SELECT * FROM barang WHERE harga = 5000"
+        "answer" => "SELECT * FROM barang WHERE harga = 5000",
+        "image" => "images/soal7.png"
     ],
     [
         "id" => 8,
         "title" => "Misi 8: Menambah Barang Koperasi",
         "story" => "Kopdes kedatangan stok baru berupa 'Penggaris'. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
-        "answer" => "INSERT INTO barang (nama) VALUES ('Penggaris')"
+        "answer" => "INSERT INTO barang (nama) VALUES ('Penggaris')",
+        "image" => "images/soal8.png"
     ],
     [
         "id" => 9,
         "title" => "Misi 9: Penyesuaian Harga Barang",
         "story" => "Sedang terjadi krisis pembakaran hutan. jadi Kopdes berencana menaikkan Harga masker di tabel <b>barang</b> menjadi 20000. Perbarui harganya!",
-        "answer" => "UPDATE barang SET harga = 20000 WHERE nama = 'Masker'"
+        "answer" => "UPDATE barang SET harga = 20000 WHERE nama = 'Masker'",
+        "image" => "images/soal9.png"
     ],
     [
         "id" => 10,
         "title" => "Misi 10: Menghapus Barang Rusak",
-        "story" => "LPG 3 KG di tabel <b>barang</b> sudah ditimbun. Hapus data tersebut dari sistem!",
-        "answer" => "DELETE FROM barang WHERE nama = 'LPG 3 KG'"
+        "story" => "LPG-3-KG di tabel <b>barang</b> sudah ditimbun. Hapus data tersebut dari sistem!",
+        "answer" => "DELETE FROM barang WHERE nama = 'LPG-3-KG'",
+        "image" => "images/soal10.png"
     ],
     [
         "id" => 11,
         "title" => "Misi 11: Direktori Pegawai Kantor",
         "story" => "Manajer HRD ingin melihat daftar seluruh pegawai yang bekerja di perusahaan melalui tabel <b>karyawan</b>.",
-        "answer" => "SELECT * FROM karyawan"
+        "answer" => "SELECT * FROM karyawan",
+        "image" => "images/soal11.png"
     ],
     [
         "id" => 12,
         "title" => "Misi 12: Mencari Karyawan Bernama Agus",
         "story" => "Bagian administrasi ingin mencari data karyawan di tabel <b>karyawan</b> yang memiliki nama 'Agus'.",
-        "answer" => "SELECT * FROM karyawan WHERE nama = 'Agus'"
+        "answer" => "SELECT * FROM karyawan WHERE nama = 'Agus'",
+        "image" => "images/soal12.png"
     ],
     [
         "id" => 13,
         "title" => "Misi 13: Pegawai Baru Masuk",
         "story" => "Perusahaan merekrut pegawai baru bernama 'Dewi'. Masukkan data tersebut ke dalam tabel <b>karyawan</b>.",
-        "answer" => "INSERT INTO karyawan (nama) VALUES ('Dewi')"
+        "answer" => "INSERT INTO karyawan (nama) VALUES ('Dewi')",
+        "image" => "images/soal13.png"
     ],
     [
         "id" => 14,
         "title" => "Misi 14: Mutasi Jabatan Karyawan",
         "story" => "Karyawan dengan nama 'Rusdi' dipindahkan posisinya menjadi bagian 'Keuangan' di tabel <b>karyawan</b>. Perbarui datanya!",
-        "answer" => "UPDATE karyawan SET bagian = 'Keuangan' WHERE nama = 'Rusdi'"
+        "answer" => "UPDATE karyawan SET bagian = 'Keuangan' WHERE nama = 'Rusdi'",
+        "image" => "images/soal14.png"
     ],
     [
         "id" => 15,
         "title" => "Misi 15: Pegawai Resign",
         "story" => "Pegawai dengan nama 'Seto' telah resmi mengundurkan diri. Hapus data tersebut dari tabel <b>karyawan</b>.",
-        "answer" => "DELETE FROM karyawan WHERE nama = 'Seto'"
+        "answer" => "DELETE FROM karyawan WHERE nama = 'Seto'",
+        "image" => "images/soal15.png"
     ]
 ];
 ?>
@@ -158,7 +172,7 @@ $questions = [
             </div>
 
             <!-- phpMyAdmin Style SQL Editor Box -->
-            <div class="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-xl">
+            <div id="editor-box" class="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden shadow-xl">
                 <div class="bg-slate-900 px-4 py-2.5 border-b border-slate-700 flex justify-between items-center text-xs text-slate-400">
                     <span class="flex items-center space-x-1.5 font-mono">
                         <span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
@@ -187,12 +201,35 @@ $questions = [
                     <textarea id="sql-input" rows="4" placeholder="contoh jawaban soal SELECT * FROM nama_tabel WHERE 1" class="sql-console w-full rounded-xl p-4 text-sm focus:outline-none resize-none border border-slate-700 focus:border-indigo-500"></textarea>
                     
                     <div class="flex justify-end">
-                        <button onclick="submitQuery()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md transition duration-200 text-sm flex items-center space-x-2">
+                        <button id="submit-btn" onclick="submitQuery()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md transition duration-200 text-sm flex items-center space-x-2">
                             <span>Jalankan Query</span>
                             <span>▶</span>
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <!-- TAMPILAN TABEL HASIL QUERY (MUNCUL HANYA KETIKA BENAR) -->
+            <div id="result-table-box" class="hidden bg-slate-800 border border-emerald-500/50 rounded-2xl p-6 shadow-xl space-y-4 animate-fade-in">
+                <div class="flex items-center space-x-2 text-emerald-400 font-semibold text-sm">
+                    <span>📊</span>
+                    <span>Tampilan Data Tabel Hasil Query (Berhasil):</span>
+                </div>
+                
+                <!-- Format Tempat Foto / Gambar Tabel Kosong -->
+                <div class="border-2 border-dashed border-slate-700 rounded-xl p-4 bg-slate-900/80 text-center">
+                    <img id="result-img" src="" alt="Tabel Hasil Query" class="mx-auto max-h-60 object-contain rounded-lg hidden">
+                    <div id="image-placeholder" class="py-10 text-slate-400 text-xs italic">
+                        🖼️ [ Format Foto Tabel Kosong ]<br>
+                        <span class="text-slate-500 text-[11px]">Letakkan file gambar di folder /images sesuai nama file soal, atau gambar akan tampil otomatis di sini.</span>
+                    </div>
+                </div>
+
+                <!-- Tombol Next ke Soal Berikutnya -->
+                <button onclick="nextQuestion()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-200 text-sm flex items-center justify-center space-x-2">
+                    <span>Lanjut ke Soal Berikutnya</span>
+                    <span>➡️</span>
+                </button>
             </div>
         </div>
 
@@ -260,14 +297,14 @@ $questions = [
             <h3 id="modal-title" class="text-lg font-bold text-white mb-2">Jawaban Benar!</h3>
             <p id="modal-desc" class="text-slate-300 text-sm mb-6">Poin berhasil ditambahkan ke kelompok.</p>
             <button onclick="closeModal()" id="modal-btn" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 rounded-xl text-sm transition">
-                Lanjut ke Misi Berikutnya
+                Lihat Hasil Tabel 📊
             </button>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer class="text-center py-4 text-xs text-slate-500 border-t border-slate-800">
-        SQL Adventure • RIfani Rohman &copy; 2026
+        SQL Adventure •Rifani Rohman&copy; 2026
     </footer>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -299,8 +336,12 @@ $questions = [
             document.getElementById('quest-title').textContent = q.title;
             document.getElementById('quest-story').innerHTML = q.story;
             
-            // Kosongkan textarea agar placeholder "contoh jawaban soal..." terlihat bersih
+            // Reset input & sembunyikan kotak hasil tabel
             document.getElementById('sql-input').value = "";
+            document.getElementById('sql-input').disabled = false;
+            document.getElementById('submit-btn').disabled = false;
+            document.getElementById('result-table-box').classList.add('hidden');
+            document.getElementById('editor-box').classList.remove('opacity-50');
         }
 
         function normalizeSQL(sql) {
@@ -342,6 +383,7 @@ $questions = [
                 title.className = "text-lg font-bold text-emerald-400 mb-2";
                 desc.textContent = `${group} berhasil menjawab dengan benar! (+10 Poin)`;
                 btn.className = "w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 rounded-xl text-sm transition";
+                btn.textContent = "Lihat Hasil Tabel 📊";
                 
                 confetti({
                     particleCount: 100,
@@ -354,6 +396,7 @@ $questions = [
                 title.className = "text-lg font-bold text-red-400 mb-2";
                 desc.textContent = `Jawaban dari ${group} masih keliru. Silakan periksa kembali query SQL kalian.`;
                 btn.className = "w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-2.5 rounded-xl text-sm transition";
+                btn.textContent = "Coba Lagi";
             }
         }
 
@@ -369,14 +412,45 @@ $questions = [
                 
                 const titleText = document.getElementById('modal-title').textContent;
                 if (titleText.includes("Benar")) {
-                    currentQuestionIndex++;
-                    if (currentQuestionIndex < questions.length) {
-                        loadQuestion();
+                    // Kunci editor dan tampilkan kotak hasil tabel di bawah soal
+                    document.getElementById('sql-input').disabled = true;
+                    document.getElementById('submit-btn').disabled = true;
+                    document.getElementById('editor-box').classList.add('opacity-50');
+
+                    // Setup gambar tabel jika file gambarnya ada
+                    const q = questions[currentQuestionIndex];
+                    const imgElement = document.getElementById('result-img');
+                    const placeholderElement = document.getElementById('image-placeholder');
+
+                    if (q.image) {
+                        imgElement.src = q.image;
+                        imgElement.onerror = function() {
+                            // Jika file gambar belum ditambahkan oleh user, tampilkan placeholder
+                            imgElement.classList.add('hidden');
+                            placeholderElement.classList.remove('hidden');
+                        };
+                        imgElement.onload = function() {
+                            imgElement.classList.remove('hidden');
+                            placeholderElement.classList.add('hidden');
+                        };
                     } else {
-                        showFinishScreen();
+                        imgElement.classList.add('hidden');
+                        placeholderElement.classList.remove('hidden');
                     }
+
+                    // Tampilkan kotak tabel hasil query
+                    document.getElementById('result-table-box').classList.remove('hidden');
                 }
             }, 200);
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showFinishScreen();
+            }
         }
 
         function showFinishScreen() {
