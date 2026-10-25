@@ -1,4 +1,4 @@
-<?php
+    <?php
 $questions = [
     [
         "id" => 1,
@@ -52,22 +52,22 @@ $questions = [
     [
         "id" => 8,
         "title" => "Misi 8: Menambah Barang Koperasi",
-        "story" => "Kopdes kedatangan stok baru berupa 'Penggaris'. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
-        "answer" => "INSERT INTO barang (nama) VALUES ('Penggaris')",
+        "story" => "Kopdes kedatangan stok baru berupa 'Penggaris' dengan jumlah 10 dengan harga 5000. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
+        "answer" => "INSERT INTO barang (nama_barang, jumlah, harga) VALUES ('Penggaris', 10, 5000)",
         "image" => "images/soal8.png"
     ],
     [
         "id" => 9,
         "title" => "Misi 9: Penyesuaian Harga Barang",
         "story" => "Sedang terjadi krisis pembakaran hutan. jadi Kopdes berencana menaikkan Harga masker di tabel <b>barang</b> menjadi 20000. Perbarui harganya!",
-        "answer" => "UPDATE barang SET harga = 20000 WHERE nama = 'Masker'",
+        "answer" => "UPDATE barang SET harga = 20000 WHERE nama_barang = 'Masker'",
         "image" => "images/soal9.png"
     ],
     [
         "id" => 10,
         "title" => "Misi 10: Menghapus Barang Rusak",
-        "story" => "LPG-3-KG di tabel <b>barang</b> sudah ditimbun. Hapus data tersebut dari sistem!",
-        "answer" => "DELETE FROM barang WHERE nama = 'LPG-3-KG'",
+        "story" => "LPG 3 KG di tabel <b>barang</b> sudah habis. Hapus data tersebut dari sistem!",
+        "answer" => "DELETE FROM barang WHERE nama_barang = 'LPG 3 KG'",
         "image" => "images/soal10.png"
     ],
     [
@@ -87,8 +87,8 @@ $questions = [
     [
         "id" => 13,
         "title" => "Misi 13: Pegawai Baru Masuk",
-        "story" => "Perusahaan merekrut pegawai baru bernama 'Dewi'. Masukkan data tersebut ke dalam tabel <b>karyawan</b>.",
-        "answer" => "INSERT INTO karyawan (nama) VALUES ('Dewi')",
+        "story" => "Perusahaan merekrut pegawai baru bernama 'Dewi' dengan id = 8 dan posisi sebagai 'Admin'. Masukkan data tersebut ke dalam tabel <b>karyawan</b>.",
+        "answer" => "INSERT INTO karyawan (id, nama, posisi) VALUES (8, 'Dewi', 'Admin')",
         "image" => "images/soal13.png"
     ],
     [
