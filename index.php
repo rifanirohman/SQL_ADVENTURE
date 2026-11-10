@@ -1,107 +1,107 @@
-    <?php
+<?php
 $questions = [
     [
         "id" => 1,
         "title" => "Misi 1: Daftar Seluruh Siswa",
-        "story" => "Di ruang Tata Usaha, Pak Guru sedang kebingungan mencari data seluruh siswa baru. Ia meminta tolong kelompokmu untuk menampilkan semua data dari tabel <b>siswa</b>.",
+        "story" => "Pak Guru di ruang TU perlu melihat <b>semua data siswa baru</b>. Tampilkan seluruh data yang ada di dalam tabel <b>siswa</b>!",
         "answer" => "SELECT * FROM siswa",
         "image" => "images/soal1.png"
     ],
     [
         "id" => 2,
         "title" => "Misi 2: Mencari Siswa Tertentu",
-        "story" => "Ibu Guru ingin memeriksa data khusus milik seorang siswa yang memiliki nomor ID 2 (<code>id = 2</code>) di dalam tabel <b>siswa</b>. Bagaimana cara menampilkannya?",
+        "story" => "Ibu Guru ingin mencari data spesifik milik siswa yang memiliki <code>id = 2</code> pada tabel <b>siswa</b>. Tampilkan data tersebut!",
         "answer" => "SELECT * FROM siswa WHERE id = 2",
         "image" => "images/soal2.png"
     ],
     [
         "id" => 3,
-       "title" => "Misi 3: Pendaftaran Murid Baru",
-        "story" => "Seorang murid baru bernama 'Rian' dengan nomer id '2' dan ia mendaftar ke kelas 'C'. Masukkan data id, nama, dan kelas ke dalam tabel <b>siswa</b> (kolom <code>id</code>, <code>nama</code>, <code>kelas</code>).",
+        "title" => "Misi 3: Pendaftaran Murid Baru",
+        "story" => "Seorang murid baru mendaftar dengan data: <code>id</code> = <b>2</b>, <code>nama</code> = <b>'Rian'</b>, dan <code>kelas</code> = <b>'C'</b>. Masukkan data tersebut ke dalam tabel <b>siswa</b>!",
         "answer" => "INSERT INTO siswa (id, nama, kelas) VALUES (2, 'Rian', 'C')",
         "image" => "images/soal3.png"
     ],
     [
         "id" => 4,
         "title" => "Misi 4: Koreksi Nama Siswa",
-        "story" => "Seorang Siswa bernama 'Riska' pindah kelas dari kelas B ke kelas A. Perbarui datanya pada tabel <b>siswa</b>",
+        "story" => "Siswa bernama <b>'Riska'</b> yang saat ini berada di <b>kelas 'B'</b> pindah ke <b>kelas 'A'</b>. Perbarui data kelas milik Riska pada tabel <b>siswa</b>!",
         "answer" => "UPDATE siswa SET kelas = 'A' WHERE nama = 'Riska' AND kelas = 'B'",
         "image" => "images/soal4.png"
     ],
     [
         "id" => 5,
         "title" => "Misi 5: Siswa Pindah Sekolah",
-        "story" => "Ayah Charles dipindah tugas keluar negeri,jadi charles harus ikut dan pindah sekolah, maka data charles akan dihapus dari tabel <b>siswa</b>.",
+        "story" => "Siswa bernama <b>'Charles'</b> resmi pindah sekolah. Hapus data Charles dari tabel <b>siswa</b>!",
         "answer" => "DELETE FROM siswa WHERE nama = 'Charles'",
         "image" => "images/soal5.png"
     ],
     [
         "id" => 6,
         "title" => "Misi 6: Pengecekan Stok Koperasi",
-        "story" => "Bantu Pengurus Kopdes yang gaptek ini untuk mengecek daftar seluruh barang dagangan yang ada di dalam tabel <b>barang</b>.",
+        "story" => "Pengurus Koperasi Sekolah ingin memeriksa inventaris. Tampilkan <b>seluruh data barang</b> yang tersimpan di dalam tabel <b>barang</b>!",
         "answer" => "SELECT * FROM barang",
         "image" => "images/soal6.png"
     ],
     [
         "id" => 7,
         "title" => "Misi 7: Barang Harga Spesifik",
-        "story" => "Petugas kopdes ini ingin mencari barang di tabel <b>barang</b> yang harganya tepat 5000 (<code>harga = 5000</code>).",
+        "story" => "Petugas koperasi ingin melihat daftar barang yang memiliki <code>harga = 5000</code>. Tampilkan data tersebut dari tabel <b>barang</b>!",
         "answer" => "SELECT * FROM barang WHERE harga = 5000",
         "image" => "images/soal7.png"
     ],
     [
         "id" => 8,
         "title" => "Misi 8: Menambah Barang Koperasi",
-        "story" => "Kopdes kedatangan stok baru berupa 'Penggaris' dengan jumlah 10 dengan harga 5000. Masukkan nama barang tersebut ke dalam tabel <b>barang</b>.",
+        "story" => "Koperasi menerima stok barang baru: <code>nama_barang</code> = <b>'Penggaris'</b>, <code>jumlah</code> = <b>10</b>, dan <code>harga</code> = <b>5000</b>. Masukkan data tersebut ke dalam tabel <b>barang</b>!",
         "answer" => "INSERT INTO barang (nama_barang, jumlah, harga) VALUES ('Penggaris', 10, 5000)",
         "image" => "images/soal8.png"
     ],
     [
         "id" => 9,
         "title" => "Misi 9: Penyesuaian Harga Barang",
-        "story" => "Sedang terjadi krisis pembakaran hutan. jadi Kopdes berencana menaikkan Harga masker di tabel <b>barang</b> menjadi 20000. Perbarui harganya!",
+        "story" => "Koperasi akan penyesuaian harga barang. Perbarui <code>harga</code> barang bernama <b>'Masker'</b> menjadi <b>20000</b> pada tabel <b>barang</b>!",
         "answer" => "UPDATE barang SET harga = 20000 WHERE nama_barang = 'Masker'",
         "image" => "images/soal9.png"
     ],
     [
         "id" => 10,
         "title" => "Misi 10: Menghapus Barang Rusak",
-        "story" => "LPG 3 KG di tabel <b>barang</b> sudah habis. Hapus data tersebut dari sistem!",
+        "story" => "Stok barang bernama <b>'LPG 3 KG'</b> telah habis dan tidak dijual lagi. Hapus data barang tersebut dari tabel <b>barang</b>!",
         "answer" => "DELETE FROM barang WHERE nama_barang = 'LPG 3 KG'",
         "image" => "images/soal10.png"
     ],
     [
         "id" => 11,
         "title" => "Misi 11: Direktori Pegawai Kantor",
-        "story" => "Manajer HRD ingin melihat daftar seluruh pegawai yang bekerja di perusahaan melalui tabel <b>karyawan</b>.",
+        "story" => "Manajer HRD ingin meninjau daftar seluruh staf. Tampilkan <b>semua data pegawai</b> dari tabel <b>karyawan</b>!",
         "answer" => "SELECT * FROM karyawan",
         "image" => "images/soal11.png"
     ],
     [
         "id" => 12,
         "title" => "Misi 12: Mencari Karyawan Bernama Agus",
-        "story" => "Bagian administrasi ingin mencari data karyawan di tabel <b>karyawan</b> yang memiliki nama 'Agus'.",
+        "story" => "Bagian administrasi ingin mencari data pegawai yang memiliki <code>nama</code> = <b>'Agus'</b>. Tampilkan datanya dari tabel <b>karyawan</b>!",
         "answer" => "SELECT * FROM karyawan WHERE nama = 'Agus'",
         "image" => "images/soal12.png"
     ],
     [
         "id" => 13,
         "title" => "Misi 13: Pegawai Baru Masuk",
-        "story" => "Perusahaan merekrut pegawai baru bernama 'Dewi' dengan id = 8 dan posisi sebagai 'Admin'. Masukkan data tersebut ke dalam tabel <b>karyawan</b>.",
+        "story" => "Perusahaan merekrut pegawai baru dengan data: <code>id</code> = <b>8</b>, <code>nama</code> = <b>'Dewi'</b>, dan <code>posisi</code> = <b>'Admin'</b>. Tambahkan data tersebut ke dalam tabel <b>karyawan</b>!",
         "answer" => "INSERT INTO karyawan (id, nama, posisi) VALUES (8, 'Dewi', 'Admin')",
         "image" => "images/soal13.png"
     ],
     [
         "id" => 14,
         "title" => "Misi 14: Mutasi Jabatan Karyawan",
-        "story" => "Karyawan dengan nama 'Rusdi' dipindahkan posisinya menjadi bagian 'Keuangan' di tabel <b>karyawan</b>. Perbarui datanya!",
+        "story" => "Karyawan bernama <b>'Rusdi'</b> mengalami mutasi kerja. Perbarui kolom <code>bagian</code> milik Rusdi menjadi <b>'Keuangan'</b> pada tabel <b>karyawan</b>!",
         "answer" => "UPDATE karyawan SET bagian = 'Keuangan' WHERE nama = 'Rusdi'",
         "image" => "images/soal14.png"
     ],
     [
         "id" => 15,
         "title" => "Misi 15: Pegawai Resign",
-        "story" => "Pegawai dengan nama 'Seto' telah resmi mengundurkan diri. Hapus data tersebut dari tabel <b>karyawan</b>.",
+        "story" => "Karyawan bernama <b>'Seto'</b> telah resmi mengundurkan diri. Hapus data Seto dari tabel <b>karyawan</b>!",
         "answer" => "DELETE FROM karyawan WHERE nama = 'Seto'",
         "image" => "images/soal15.png"
     ]
@@ -143,18 +143,92 @@ $questions = [
     <!-- MAIN CONTAINER -->
     <main class="max-w-3xl w-full mx-auto p-4 md:p-6 my-auto">
 
-        <!-- HALAMAN 1: HOME -->
-        <div id="home-screen" class="bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-xl text-center">
-            <div class="inline-block bg-indigo-500/10 text-indigo-400 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-indigo-500/20">
-                Belajar Query SQL Dasar phpMyAdmin
+        <!-- HALAMAN 1: HOME & MATERI PEMBELAJARAN -->
+        <div id="home-screen" class="bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-xl text-left space-y-6">
+            
+            <div class="text-center">
+                <div class="inline-block bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-3 border border-indigo-500/20">
+                    Modul Singkat & Panduan SQL Dasar
+                </div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-2">Selamat Datang di SQL Adventure</h2>
+                <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
+                    Sebelum memulai kompetisi, pelajari ringkasan materi sintaks dasar SQL berikut bersama kelompokmu!
+                </p>
             </div>
-            <h2 class="text-3xl font-extrabold text-white mb-3">Selamat Datang di SQL Adventure</h2>
-            <p class="text-slate-400 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
-                Diskusikan soal cerita bersama kelompokmu, tulis query SQL dengan format dasar yang benar, dan kumpulkan poin terbanyak hingga ke puncak podium!
-            </p>
-            <button onclick="startGame()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition duration-200 text-sm tracking-wide">
-                Mulai Game 🚀
-            </button>
+
+            <!-- RINGKASAN MATERI SQL -->
+            <div class="space-y-4">
+                <h3 class="text-sm font-bold text-indigo-300 uppercase tracking-wider border-b border-slate-700 pb-2">
+                    📚 Ringkasan Perintah Dasar SQL (CRUD)
+                </h3>
+
+                <!-- GRID MATERI -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    
+                    <!-- 1. SELECT -->
+                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-indigo-400 text-sm flex items-center justify-between">
+                            <span>1. Menampilkan Data (SELECT)</span>
+                            <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px]">READ</span>
+                        </div>
+                        <p class="text-slate-300">Digunakan untuk mengambil atau menampilkan data dari tabel database.</p>
+                        <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-emerald-400 space-y-1">
+                            <div><span class="text-slate-500">-- Semua Data:</span><br>SELECT * FROM nama_tabel</div>
+                            <div><span class="text-slate-500">-- Dengan Kondisi:</span><br>SELECT * FROM nama_tabel WHERE kolom = 'nilai'</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. INSERT -->
+                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-indigo-400 text-sm flex items-center justify-between">
+                            <span>2. Menambah Data (INSERT)</span>
+                            <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px]">CREATE</span>
+                        </div>
+                        <p class="text-slate-300">Digunakan untuk memasukkan baris data baru ke dalam kolom tabel.</p>
+                        <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-emerald-400">
+                            INSERT INTO nama_tabel (kolom1, kolom2) VALUES ('nilai1', 'nilai2')
+                        </div>
+                    </div>
+
+                    <!-- 3. UPDATE -->
+                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-indigo-400 text-sm flex items-center justify-between">
+                            <span>3. Memperbarui Data (UPDATE)</span>
+                            <span class="bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded text-[10px]">UPDATE</span>
+                        </div>
+                        <p class="text-slate-300">Digunakan untuk mengubah data yang sudah ada berdasarkan kondisi `WHERE`.</p>
+                        <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-emerald-400">
+                            UPDATE nama_tabel SET kolom = 'nilai_baru' WHERE kolom_kunci = 'nilai'
+                        </div>
+                    </div>
+
+                    <!-- 4. DELETE -->
+                    <div class="bg-slate-900/80 border border-slate-700 rounded-xl p-4 space-y-2">
+                        <div class="font-bold text-indigo-400 text-sm flex items-center justify-between">
+                            <span>4. Menghapus Data (DELETE)</span>
+                            <span class="bg-red-500/20 text-red-300 px-2 py-0.5 rounded text-[10px]">DELETE</span>
+                        </div>
+                        <p class="text-slate-300">Digunakan untuk menghapus baris data dari tabel berdasarkan kondisi `WHERE`.</p>
+                        <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-emerald-400">
+                            DELETE FROM nama_tabel WHERE kolom = 'nilai'
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CATATAN PENTING -->
+                <div class="bg-indigo-950/40 border border-indigo-500/30 rounded-xl p-3 text-xs text-indigo-200">
+                    💡 <b>Tips Game:</b> Perhatikan penulisan nama tabel (<code>siswa</code>, <code>barang</code>, <code>karyawan</code>), nama kolom, dan tanda petik tunggal (<code>' '</code>) untuk data teks!
+                </div>
+            </div>
+
+            <!-- TOMBOL START -->
+            <div class="text-center pt-2">
+                <button onclick="startGame()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 px-10 rounded-xl shadow-lg transition duration-200 text-sm tracking-wide">
+                    Sudah Paham? Mulai Game 🚀
+                </button>
+            </div>
+
         </div>
 
         <!-- HALAMAN 2: GAME AREA -->
@@ -200,7 +274,10 @@ $questions = [
                     <!-- Textarea dengan Placeholder Template -->
                     <textarea id="sql-input" rows="4" placeholder="contoh jawaban soal SELECT * FROM nama_tabel WHERE 1" class="sql-console w-full rounded-xl p-4 text-sm focus:outline-none resize-none border border-slate-700 focus:border-indigo-500"></textarea>
                     
-                    <div class="flex justify-end">
+                    <div class="flex justify-between">
+                        <button id="skip-btn" onclick="skipQuestion()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold py-2.5 px-4 rounded-xl transition duration-200 text-sm">
+                            Lewati Soal (0 poin)
+                        </button>
                         <button id="submit-btn" onclick="submitQuery()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-6 rounded-xl shadow-md transition duration-200 text-sm flex items-center space-x-2">
                             <span>Jalankan Query</span>
                             <span>▶</span>
@@ -229,6 +306,26 @@ $questions = [
                 <button onclick="nextQuestion()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition duration-200 text-sm flex items-center justify-center space-x-2">
                     <span>Lanjut ke Soal Berikutnya</span>
                     <span>➡️</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- LEADERBOARD SEMENTARA -->
+        <div id="leaderboard-screen" class="hidden space-y-6">
+            <div class="bg-slate-800 border border-indigo-500/40 rounded-2xl p-6 shadow-xl text-center space-y-3">
+                <div class="text-4xl">🏆</div>
+                <h2 class="text-2xl font-bold text-white">Leaderboard Sementara</h2>
+                <p id="leaderboard-round" class="text-slate-300 text-sm"></p>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-xl">
+                <h3 class="text-sm font-bold text-slate-300 mb-3 uppercase tracking-wider">Peringkat Seluruh Kelompok</h3>
+                <div class="space-y-2" id="leaderboard-list"></div>
+            </div>
+
+            <div class="text-center pt-2">
+                <button onclick="continueGame()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 px-6 rounded-xl text-sm transition">
+                    Lanjutkan Misi ➡️
                 </button>
             </div>
         </div>
@@ -304,7 +401,7 @@ $questions = [
 
     <!-- FOOTER -->
     <footer class="text-center py-4 text-xs text-slate-500 border-t border-slate-800">
-        SQL Adventure •Rifani Rohman&copy; 2026
+        SQL Adventure • Rifani Rohman &copy; 2026
     </footer>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -340,6 +437,7 @@ $questions = [
             document.getElementById('sql-input').value = "";
             document.getElementById('sql-input').disabled = false;
             document.getElementById('submit-btn').disabled = false;
+            document.getElementById('skip-btn').disabled = false;
             document.getElementById('result-table-box').classList.add('hidden');
             document.getElementById('editor-box').classList.remove('opacity-50');
         }
@@ -378,6 +476,7 @@ $questions = [
 
             if (isCorrect) {
                 groupScores[group] += 10;
+                document.getElementById('skip-btn').disabled = true;
                 icon.textContent = "🎉";
                 title.textContent = "Jawaban Benar!";
                 title.className = "text-lg font-bold text-emerald-400 mb-2";
@@ -425,7 +524,6 @@ $questions = [
                     if (q.image) {
                         imgElement.src = q.image;
                         imgElement.onerror = function() {
-                            // Jika file gambar belum ditambahkan oleh user, tampilkan placeholder
                             imgElement.classList.add('hidden');
                             placeholderElement.classList.remove('hidden');
                         };
@@ -447,10 +545,56 @@ $questions = [
         function nextQuestion() {
             currentQuestionIndex++;
             if (currentQuestionIndex < questions.length) {
-                loadQuestion();
+                if (currentQuestionIndex % 5 === 0) {
+                    showLeaderboardScreen();
+                } else {
+                    loadQuestion();
+                }
             } else {
                 showFinishScreen();
             }
+        }
+
+        function skipQuestion() {
+            nextQuestion();
+        }
+
+        function showLeaderboardScreen() {
+            document.getElementById('game-screen').classList.add('hidden');
+            document.getElementById('leaderboard-screen').classList.remove('hidden');
+            document.getElementById('leaderboard-round').textContent =
+                `Setelah menyelesaikan ${currentQuestionIndex} dari ${questions.length} misi`;
+            renderRankingList('leaderboard-list');
+        }
+
+        function continueGame() {
+            document.getElementById('leaderboard-screen').classList.add('hidden');
+            document.getElementById('game-screen').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        function renderRankingList(containerId) {
+            const sortedGroups = Object.entries(groupScores).sort((a, b) => b[1] - a[1]);
+            let rankingHTML = "";
+
+            sortedGroups.forEach(([group, score], index) => {
+                let badgeColor = "bg-slate-900 text-slate-300 border-slate-700";
+                if (index === 0) badgeColor = "bg-amber-500/10 text-amber-400 border-amber-500/30 font-bold";
+                else if (index === 1) badgeColor = "bg-slate-200/10 text-slate-200 border-slate-200/30";
+                else if (index === 2) badgeColor = "bg-amber-700/10 text-amber-600 border-amber-700/30";
+
+                rankingHTML += `
+                    <div class="flex justify-between items-center px-4 py-2.5 rounded-xl border ${badgeColor} text-sm">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-6 text-center font-bold">#${index + 1}</span>
+                            <span>${group}</span>
+                        </div>
+                        <span class="font-extrabold">${score} Poin</span>
+                    </div>
+                `;
+            });
+
+            document.getElementById(containerId).innerHTML = rankingHTML;
         }
 
         function showFinishScreen() {
@@ -472,24 +616,7 @@ $questions = [
                 document.getElementById('podium-3-score').textContent = sortedGroups[2][1] + " Poin";
             }
 
-            let rankingHTML = "";
-            sortedGroups.forEach(([group, score], index) => {
-                let badgeColor = "bg-slate-900 text-slate-300 border-slate-700";
-                if (index === 0) badgeColor = "bg-amber-500/10 text-amber-400 border-amber-500/30 font-bold";
-                else if (index === 1) badgeColor = "bg-slate-200/10 text-slate-200 border-slate-200/30";
-                else if (index === 2) badgeColor = "bg-amber-700/10 text-amber-600 border-amber-700/30";
-
-                rankingHTML += `
-                    <div class="flex justify-between items-center px-4 py-2.5 rounded-xl border ${badgeColor} text-sm">
-                        <div class="flex items-center space-x-3">
-                            <span class="w-6 text-center font-bold">#${index + 1}</span>
-                            <span>${group}</span>
-                        </div>
-                        <span class="font-extrabold">${score} Poin</span>
-                    </div>
-                `;
-            });
-            document.getElementById('full-ranking-list').innerHTML = rankingHTML;
+            renderRankingList('full-ranking-list');
 
             confetti({
                 particleCount: 200,
